@@ -1,191 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet" />
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Fork Me! FCC: Test Suite Template</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- START NAV -->
-
-    <nav id="navbar" class="nav">
-      <ul class="nav-list">
-          <li>
-              <a href="#welcome-section">About</a>
-          </li>
-          <li>
-              <a href="#projects">Work</a>
-          </li>
-          <li>
-              <a href="#contact">Contact</a>
-          </li>
-      </ul>
-  </nav>
-
-  <!-- END NAV -->
-
-  <!-- START WELCOME SECTION -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <section id="welcome-section" class="welcome-section">
-      <h1>Hey I am Mohammad Rafi Amin and my partner is 
-        Tashobya Israel</h1>
-      <p>we are web developers</p>
-  </section>
-  <!-- END WELCOME SECTION -->
-
-    <!-- START PROJECTS SECTION -->
-
-    <section id="projects" class="projects-section">
-      <h2 class="projects-section-header">These are some of my projects</h2>
-
-      <div class="projects-grid">
-          <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="_blank" class="project project-tile">
-        <img
-          class="project-image"
-          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
-          alt="project"
-        />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          Tribute Page
-          <span class="code">&#47;&gt;</span>
+    <div class="container">
+      <header class="header">
+        <h1 id="title" class="text-center">FreeCodeCamp Survey Form</h1>
+        <p id="description" class="description text-center">
+          Thank you for taking the time to help us improve the platform
         </p>
-      </a>
-          <a href="https://codepen.io/freeCodeCamp/full/qRZeGZ" target="_blank" class="project project-tile">
-        <img
-          class="project-image"
-          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
-          alt="project"
-        />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          Random Quote Machine
-          <span class="code">&#47;&gt;</span>
-        </p>
-      </a>
-          <a href="https://codepen.io/freeCodeCamp/full/wgGVVX" target="_blank" class="project project-tile">
-        <img
-          class="project-image"
-          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png"
-          alt="project"
-        />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          JavaScript Calculator
-          <span class="code">&#47;&gt;</span>
-        </p>
-      </a>
-          <a href="https://codepen.io/freeCodeCamp/full/mVEJag" target="_blank" class="project project-tile">
-        <img
-          class="project-image"
-          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg"
-          alt="project"
-        />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          Map Data Across the Globe
-          <span class="code">&#47;&gt;</span>
-        </p>
-      </a>
-          <a href="https://codepen.io/freeCodeCamp/full/wGqEga" target="_blank" class="project project-tile">
-        <img
-          class="project-image"
-          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/wiki.png"
-          alt="project"
-        />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          Wikipedia Viewer
-          <span class="code">&#47;&gt;</span>
-        </p>
-      </a>
-          <a href="https://codepen.io/freeCodeCamp/full/KzXQgy" target="_blank" class="project project-tile">
-        <img
-          class="project-image"
-          src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tic-tac-toe.png"
-          alt="project"
-        />
-        <p class="project-title">
-          <span class="code">&lt;</span>
-          Tic Tac Toe Game
-          <span class="code">&#47;&gt;</span>
-        </p>
-      </a>
-      </div>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-control"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-control"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label" for="number"
+            >Age<span class="clue">(optional)</span></label
+          >
+          <input
+            type="number"
+            name="age"
+            id="number"
+            min="10"
+            max="99"
+            class="form-control"
+            placeholder="Age"
+          />
+        </div>
+        <div class="form-group">
+          <p>Which option best describes your current role?</p>
+          <select id="dropdown" name="role" class="form-control" required>
+            <option disabled selected value>Select current role</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
 
-      <a href="https://codepen.io/FreeCodeCamp/" class="btn btn-show-all" target="_blank">Show all<i class="fas fa-chevron-right"></i
-    ></a>
-  </section>
+        <div class="form-group">
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <label>
+            <input
+              name="user-recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />Definitely</label
+          >
+          <label>
+            <input
+              name="user-recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />Maybe</label
+          >
 
-  <!-- END PROJECTS SECTION -->
+          <label
+            ><input
+              name="user-recommend"
+              value="not-sure"
+              type="radio"
+              class="input-radio"
+            />Not sure</label
+          >
+        </div>
 
-  <!-- START CONTACT SECTION -->
+        <div class="form-group">
+          <p>What is your favorite feature of freeCodeCamp?</p>
+          <select id="most-like" name="mostLike" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="openSource">Open Source</option>
+          </select>
+        </div>
 
-  <section id="contact" class="contact-section">
-      <div class="contact-section-header">
-          <h2>Let's work together...</h2>
-          <p>How do you take your coffee?</p>
-      </div>
-      <div class="contact-links">
-          <a href="https://facebook.com/freecodecamp" target="_blank" class="btn contact-details"><i class="fab fa-facebook-square"></i> Facebook</a
-      >
-      <a
-        id="profile-link"
-        href="https://github.com/freecodecamp"
-        target="_blank"
-        class="btn contact-details"
-        ><i class="fab fa-github"></i> GitHub</a
-      >
-      <a
-        href="https://twitter.com/freecodecamp"
-        target="_blank"
-        class="btn contact-details"
-        ><i class="fab fa-twitter"></i> Twitter</a
-      >
-      <a href="/cdn-cgi/l/email-protection#bbdec3dad6cbd7defbdec3dad6cbd7de95d8d4d6" class="btn contact-details"><i class="fas fa-at"></i> Send a mail</a
-      >
-      <a href="tel:555-555-5555" class="btn contact-details"
-        ><i class="fas fa-mobile-alt"></i> Call me</a
-      >
-    </div>
-  </section>
-
-  <!-- END CONTACT SECTION -->
-
-  <!-- START FOOTER SECTION -->
-
-  <footer>
-    <p>
-      **This is just a fake portfolio. All the projects and contact details
-      given are not real.
-    </p>
-    <p>
-      &copy; Created for
-      <a href="https://www.freecodecamp.com/" target="_blank"
-        >freeCodeCamp <i class="fab fa-free-code-camp"></i
-      ></a>
+        <div class="form-group">
+          <p>
+            What would you like to see improved?
+            <span class="clue">(Check all that apply)</span>
           </p>
-          </footer>
 
-          <!-- END FOOTER SECTION -->
-          <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <!--
+          <label
+            ><input
+              name="prefer"
+              value="front-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Front-end Projects</label
+          >
+          <label>
+            <input
+              name="prefer"
+              value="back-end-projects"
+              type="checkbox"
+              class="input-checkbox"
+            />Back-end Projects</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="data-visualization"
+              type="checkbox"
+              class="input-checkbox"
+            />Data Visualization</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="challenges"
+              type="checkbox"
+              class="input-checkbox"
+            />Challenges</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="open-source-community"
+              type="checkbox"
+              class="input-checkbox"
+            />Open Source Community</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="gitter-help-rooms"
+              type="checkbox"
+              class="input-checkbox"
+            />Gitter help rooms</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="videos"
+              type="checkbox"
+              class="input-checkbox"
+            />Videos</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="city-meetups"
+              type="checkbox"
+              class="input-checkbox"
+            />City Meetups</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="wiki"
+              type="checkbox"
+              class="input-checkbox"
+            />Wiki</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="forum"
+              type="checkbox"
+              class="input-checkbox"
+            />Forum</label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="additional-courses"
+              type="checkbox"
+              class="input-checkbox"
+            />Additional Courses</label
+          >
+        </div>
 
-    Hello Camper!
+        <div class="form-group">
+          <p>Any comments or suggestions?</p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </div>
 
-    For now, the test suite only works in Chrome!
-    Please read the README below in the JS Editor before beginning.
-    Feel free to delete this message once you have read it.
-    Good luck and Happy Coding!
-
-    - The freeCodeCamp Team
-
-    -->
-    <script  src="js/index.js"></script>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
